@@ -29,6 +29,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Updated project metadata and documentation to make `omniauth-jwt2` the
   maintained canonical gem under the `omniauth` organization while preserving
   the public `OmniAuth::Strategies::JWT` API and `require "omniauth/jwt"` path.
+- Moved the package version constant to the gem-name namespace
+  `Omniauth::JWT2::Version::VERSION`, while keeping
+  `Omniauth::JWT::Version::VERSION` as a compatibility alias.
 
 ### Deprecated
 

@@ -11,10 +11,10 @@ gem_version =
     # Loading Version into an anonymous module allows version.rb to get code coverage from SimpleCov!
     # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
     # See: https://github.com/panorama-ed/memo_wise/pull/397
-    Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/omniauth/jwt/version.rb", mod) }::Omniauth::JWT::Version::VERSION
+    Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/omniauth/jwt2/version.rb", mod) }::Omniauth::JWT2::Version::VERSION
   else
-    require_relative "lib/omniauth/jwt/version"
-    Omniauth::JWT::Version::VERSION
+    require_relative "lib/omniauth/jwt2/version"
+    Omniauth::JWT2::Version::VERSION
   end
 
 Gem::Specification.new do |spec|

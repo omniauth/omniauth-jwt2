@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "../jwt2/version"
+
 module Omniauth
   module JWT
-    module Version
-      VERSION = "0.1.0"
-    end
-    VERSION = Version::VERSION # Traditional Constant Location
+    Version = JWT2::Version
+    VERSION = JWT2::VERSION
   end
 end

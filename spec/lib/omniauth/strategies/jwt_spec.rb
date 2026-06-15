@@ -16,6 +16,11 @@ RSpec.describe OmniAuth::Strategies::JWT do
     end
   }
 
+  it "aliases the historical version namespace to the gem-name namespace" do
+    expect(Omniauth::JWT::Version).to equal(Omniauth::JWT2::Version)
+    expect(Omniauth::JWT::VERSION).to eq(Omniauth::JWT2::VERSION)
+  end
+
   context "request phase" do
     it "redirects to the configured login url" do
       # TODO: Figure out how to write this test without using the deprecated

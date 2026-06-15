@@ -86,6 +86,9 @@ governance files, and release tooling.</li>
   <li>Updated project metadata and documentation to make <code>omniauth-jwt2</code> the<br>
 maintained canonical gem under the <code>omniauth</code> organization while preserving<br>
 the public <code>OmniAuth::Strategies::JWT</code> API and <code>require "omniauth/jwt"</code> path.</li>
+  <li>Moved the package version constant to the gem-name namespace<br>
+<code>Omniauth::JWT2::Version::VERSION</code>, while keeping<br>
+<code>Omniauth::JWT::Version::VERSION</code> as a compatibility alias.</li>
 </ul>
 
 <h3 id="deprecated">Deprecated</h3>
@@ -103,7 +106,7 @@ generated modular gemfiles and Appraisals.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jun 15 16:45:22 2026 by
+  Generated on Mon Jun 15 16:56:31 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>
