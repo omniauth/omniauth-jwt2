@@ -1,0 +1,2 @@
+# Ruby 2.4 and 2.5 need the rack-session fork with old-Ruby load fixes.
+gem "rack-session", "< 2", github: "pboling/rack-session", branch: "fix-missing-rack-session"

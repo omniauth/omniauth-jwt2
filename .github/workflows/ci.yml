@@ -1,5 +1,8 @@
 name: Omniauth JWT Tests
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -47,9 +50,9 @@ jobs:
             ruby: "3.2"
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
       - name: Setup Ruby & Bundle
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@89f90524b88a01fe6e0b732220432cc6142926af # v1.313.0
         with:
           ruby-version: ${{ matrix.ruby }}
           rubygems: ${{ matrix.rubygems }}

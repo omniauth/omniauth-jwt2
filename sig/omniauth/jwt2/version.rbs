@@ -1,0 +1,8 @@
+module Omniauth
+  module JWT
+    module Version
+      VERSION: String
+    end
+    VERSION: String
+  end
+end

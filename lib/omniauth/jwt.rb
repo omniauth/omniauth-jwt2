@@ -1,5 +1,6 @@
 # External gems
 require "version_gem"
+require_relative "jwt/version"
 
 # This gem
 require "omniauth/jwt/version"

@@ -1,5 +1,5 @@
-require 'omniauth'
-require 'jwt'
+require "omniauth"
+require "jwt"
 
 module OmniAuth
   module Strategies
@@ -14,11 +14,11 @@ module OmniAuth
       option :secret, nil
       option :decode_options, {}
       option :jwks_loader
-      option :algorithm, 'HS256' # overridden by options.decode_options[:algorithms]
+      option :algorithm, "HS256" # overridden by options.decode_options[:algorithms]
       option :decode_options, {}
-      option :uid_claim, 'email'
-      option :required_claims, %w(name email)
-      option :info_map, { name: "name", email: "email" }
+      option :uid_claim, "email"
+      option :required_claims, %w[name email]
+      option :info_map, {name: "name", email: "email"}
       option :auth_url, nil
       option :valid_within, nil
 
@@ -29,31 +29,31 @@ module OmniAuth
       def decoded
         begin
           secret = if defined?(OpenSSL)
-                     case options.algorithm
-                     when *%w[RS256 RS384 RS512]
-                       OpenSSL::PKey::RSA.new(options.secret).public_key
-                     when *%w[ES256 ES384 ES512]
-                       OpenSSL::PKey::EC.new(options.secret)
-                     when *%w[HS256 HS384 HS512]
-                       options.secret
-                     else
-                       raise NotImplementedError, "Unsupported algorithm: #{options.algorithm}"
-                     end
-                   else
-                     options.secret
-                   end
+            case options.algorithm
+            when "RS256", "RS384", "RS512"
+              OpenSSL::PKey::RSA.new(options.secret).public_key
+            when "ES256", "ES384", "ES512"
+              OpenSSL::PKey::EC.new(options.secret)
+            when "HS256", "HS384", "HS512"
+              options.secret
+            else
+              raise NotImplementedError, "Unsupported algorithm: #{options.algorithm}"
+            end
+          else
+            options.secret
+          end
 
           # JWT.decode can handle either algorithms or algorithm, but not both.
           default_algos = options.decode_options.key?(:algorithms) ? options.decode_options[:algorithms] : [options.algorithm]
           @decoded ||= ::JWT.decode(
-            request.params['jwt'],
+            request.params["jwt"],
             secret,
             true,
             options.decode_options.merge(
               {
                 algorithms: default_algos,
                 jwks: options.jwks_loader
-              }.delete_if {|_, v| v.nil? }
+              }.delete_if { |_, v| v.nil? }
             )
           )[0]
         rescue Exception => e
@@ -73,15 +73,15 @@ module OmniAuth
       def callback_phase
         super
       rescue BadJwt => e
-        fail! 'bad_jwt', e
+        fail! "bad_jwt", e
       rescue ClaimInvalid => e
         fail! :claim_invalid, e
       end
 
-      uid{ decoded[options.uid_claim] }
+      uid { decoded[options.uid_claim] }
 
       extra do
-        {:raw_info => decoded}
+        {raw_info: decoded}
       end
 
       info do
