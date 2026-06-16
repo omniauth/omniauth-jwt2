@@ -152,7 +152,7 @@ RSpec.describe OmniAuth::Strategies::JWT do
               private_key_class.generate(2048)
                 .to_pem
             elsif private_key_class == OpenSSL::PKey::EC
-              ecdsa_private_key.to_pem
+              ecdsa_private_key
             else
               private_key_class.new(rand_secret)
             end
