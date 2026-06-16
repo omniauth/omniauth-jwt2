@@ -28,8 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Restored JRuby 9.2 and 9.3 ECDSA JWT decoding by using OpenSSL APIs available
-  on older JRuby releases for EC key generation and PEM parsing.
+- Restored JRuby 9.2 and 9.3 CI by using OpenSSL APIs available on older JRuby
+  releases for EC key setup and only running ECDSA examples when the runtime
+  exposes the primitives required by the `jwt` gem.
 
 ### Security
 

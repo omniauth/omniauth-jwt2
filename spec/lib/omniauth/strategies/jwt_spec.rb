@@ -140,7 +140,11 @@ RSpec.describe OmniAuth::Strategies::JWT do
       OpenSSL::PKey::RSA => %w[RS256 RS384 RS512],
       String => %w[HS256 HS384 HS512]
     }
-    algos.merge!(OpenSSL::PKey::EC => %w[ES256 ES384 ES512]) unless ["2.2.10", "2.3.8"].include?(RubyVersion.to_s)
+    supports_ecdsa_jwt = OpenSSL::PKey::EC.method_defined?(:dsa_sign_asn1) &&
+      OpenSSL::PKey::EC.method_defined?(:dsa_verify_asn1)
+    if supports_ecdsa_jwt && !["2.2.10", "2.3.8"].include?(RubyVersion.to_s)
+      algos.merge!(OpenSSL::PKey::EC => %w[ES256 ES384 ES512])
+    end
     algos.each do |private_key_class, algorithms|
       algorithms.each do |algorithm|
         context "when the #{algorithm} algorithm is used" do
