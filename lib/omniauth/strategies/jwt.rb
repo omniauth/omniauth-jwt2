@@ -71,13 +71,25 @@ module OmniAuth
       end
 
       def ec_key(secret)
-        return secret if secret.is_a?(OpenSSL::PKey::EC)
-
-        if OpenSSL::PKey.respond_to?(:read)
+        key = if secret.is_a?(OpenSSL::PKey::EC)
+          secret
+        elsif OpenSSL::PKey.respond_to?(:read)
           OpenSSL::PKey.read(secret)
         else
           OpenSSL::PKey::EC.new(secret)
         end
+
+        ec_public_key(key)
+      end
+
+      def ec_public_key(key)
+        return key unless key.private?
+
+        public_key = OpenSSL::PKey::EC.new(key.group)
+        public_key.public_key = key.public_key
+        public_key
+      rescue OpenSSL::PKey::PKeyError
+        key
       end
 
       def callback_phase
