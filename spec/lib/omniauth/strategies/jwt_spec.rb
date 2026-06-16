@@ -233,4 +233,41 @@ RSpec.describe OmniAuth::Strategies::JWT do
       end
     end
   end
+
+  describe "#ec_key" do
+    subject { described_class.new({}) }
+
+    let(:ec_private_key) { generate_ec_private_key("prime256v1") }
+
+    it "accepts EC key objects directly" do
+      expect(subject.ec_key(ec_private_key)).to be_a(OpenSSL::PKey::EC)
+    end
+
+    it "reads EC keys with the generic OpenSSL reader when available" do
+      expect(subject.ec_key(ec_private_key.to_pem)).to be_a(OpenSSL::PKey::EC)
+    end
+
+    it "falls back to the EC constructor when the generic OpenSSL reader is unavailable" do
+      allow(OpenSSL::PKey).to receive(:respond_to?).and_call_original
+      allow(OpenSSL::PKey).to receive(:respond_to?).with(:read).and_return(false)
+
+      expect(subject.ec_key("prime256v1")).to be_a(OpenSSL::PKey::EC)
+    end
+  end
+
+  describe "#ec_public_key" do
+    subject { described_class.new({}) }
+
+    it "leaves legacy EC keys without private-key predicates unchanged" do
+      key = Object.new
+
+      expect(subject.ec_public_key(key)).to equal(key)
+    end
+
+    it "leaves public EC keys unchanged" do
+      key = instance_double(OpenSSL::PKey::EC, private?: false)
+
+      expect(subject.ec_public_key(key)).to equal(key)
+    end
+  end
 end
