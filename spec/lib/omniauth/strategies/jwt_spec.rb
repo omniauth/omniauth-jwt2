@@ -1,6 +1,14 @@
 require "spec_helper"
 
 RSpec.describe OmniAuth::Strategies::JWT do
+  def generate_ec_private_key(curve_name)
+    return OpenSSL::PKey::EC.generate(curve_name) if OpenSSL::PKey::EC.respond_to?(:generate)
+
+    key = OpenSSL::PKey::EC.new(curve_name)
+    key.generate_key
+    key
+  end
+
   let(:response_json) { JSON.parse(last_response.body) }
   let(:rand_secret) { SecureRandom.hex(10) }
   let(:args) { [rand_secret, {auth_url: "http://example.com/login"}] }
@@ -143,7 +151,7 @@ RSpec.describe OmniAuth::Strategies::JWT do
               private_key_class.generate(2048)
                 .to_pem
             elsif private_key_class == OpenSSL::PKey::EC
-              private_key_class.generate(ecdsa_named_curves[algorithm])
+              generate_ec_private_key(ecdsa_named_curves[algorithm])
                 .to_pem
             else
               private_key_class.new(rand_secret)

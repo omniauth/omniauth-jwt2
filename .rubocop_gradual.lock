@@ -6,15 +6,15 @@
     [166, 3, 39, "Gemspec/DependencyVersion: Dependency version specification is required.", 190611830],
     [167, 3, 45, "Gemspec/DependencyVersion: Dependency version specification is required.", 1496807756]
   ],
-  "spec/lib/omniauth/strategies/jwt_spec.rb:1409726614": [
+  "spec/lib/omniauth/strategies/jwt_spec.rb:3056129689": [
     [3, 1, 40, "RSpec/SpecFilePathFormat: Spec path should end with `omni_auth/strategies/jwt*_spec.rb`.", 1545891400],
-    [12, 13, 25, "RSpec/DescribedClass: Use `described_class` instead of `OmniAuth::Strategies::JWT`.", 2234488924],
-    [24, 11, 15, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 391893083],
-    [34, 11, 16, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 1409468707],
-    [121, 9, 20, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2951559342],
-    [125, 5, 125, "RSpec/LeakyLocalVariable: Do not use local variables defined outside of examples inside of them.", 689775740],
-    [135, 5, 56, "Performance/RedundantMerge: Use `algos[OpenSSL::PKey::EC] = %w[ES256 ES384 ES512]` instead of `algos.merge!(OpenSSL::PKey::EC => %w[ES256 ES384 ES512])`.", 2983772293],
-    [165, 13, 28, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 1877551307]
+    [20, 13, 25, "RSpec/DescribedClass: Use `described_class` instead of `OmniAuth::Strategies::JWT`.", 2234488924],
+    [32, 11, 15, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 391893083],
+    [42, 11, 16, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 1409468707],
+    [129, 9, 20, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2951559342],
+    [133, 5, 125, "RSpec/LeakyLocalVariable: Do not use local variables defined outside of examples inside of them.", 689775740],
+    [143, 5, 56, "Performance/RedundantMerge: Use `algos[OpenSSL::PKey::EC] = %w[ES256 ES384 ES512]` instead of `algos.merge!(OpenSSL::PKey::EC => %w[ES256 ES384 ES512])`.", 2983772293],
+    [173, 13, 28, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 1877551307]
   ],
   "spec/spec_helper.rb:2608937500": [
     [50, 3, 34, "RSpec/Output: Do not write to stdout in specs.", 1097326571],

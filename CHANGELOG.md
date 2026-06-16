@@ -28,6 +28,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Restored JRuby 9.2 and 9.3 CI coverage for ECDSA JWT decode specs by using
+  the older OpenSSL EC key generation API when `OpenSSL::PKey::EC.generate` is
+  unavailable.
+
 ### Security
 
 ## [0.1.1] - 2026-06-16
