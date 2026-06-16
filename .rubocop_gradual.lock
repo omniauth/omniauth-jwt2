@@ -1,5 +1,5 @@
 {
-  "lib/omniauth/strategies/jwt.rb:3801968258": [
+  "lib/omniauth/strategies/jwt.rb:3798539357": [
     [59, 9, 76, "Lint/RescueException: Avoid rescuing the `Exception` class. Perhaps you meant to rescue `StandardError`?", 967033479]
   ],
   "omniauth-jwt2.gemspec:3554186305": [

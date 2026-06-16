@@ -83,6 +83,7 @@ module OmniAuth
       end
 
       def ec_public_key(key)
+        return key unless key.respond_to?(:private?)
         return key unless key.private?
 
         public_key = OpenSSL::PKey::EC.new(key.group)
