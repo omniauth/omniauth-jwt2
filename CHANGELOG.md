@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.1] - 2026-06-16
+
+- TAG: [v0.1.1][0.1.1t]
+- COVERAGE: 97.01% -- 65/67 lines in 5 files
+- BRANCH COVERAGE: 85.71% -- 12/14 branches in 5 files
+- 11.76% documented
+
+### Added
+
 - Retemplated the project with the current `kettle-jem`/`kettle-dev` stack,
   adding the generated multi-Ruby CI matrix, Appraisal setup, documentation,
   governance files, and release tooling.
@@ -33,13 +52,11 @@ Please file a bug if you notice a violation of semantic versioning.
   `Omniauth::JWT2::Version::VERSION`, while keeping
   `Omniauth::JWT::Version::VERSION` as a compatibility alias.
 
-### Deprecated
-
 ### Removed
 
 - Removed obsolete pre-template workflow and gemfile setup in favor of the
   generated modular gemfiles and Appraisals.
 
-### Fixed
-
-### Security
+[Unreleased]: https://github.com/omniauth/omniauth-jwt2/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/omniauth/omniauth-jwt2/compare/2a0397c0592e25b1c518d2c41fcbb8628a255bdf...v0.1.1
+[0.1.1t]: https://github.com/omniauth/omniauth-jwt2/releases/tag/v0.1.1

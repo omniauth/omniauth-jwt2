@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.name = "omniauth-jwt2"
   spec.version = gem_version
   spec.authors = ["Michael Bleigh", "Robin Ward", "Peter Boling"]
-  spec.email = ["mbleigh@mbleigh.com", "robin.ward@gmail.com", "peter.boling@gmail.com"]
+  spec.email = ["mbleigh@mbleigh.com", "robin.ward@gmail.com", "floss@galtzo.com"]
 
   spec.summary = "🔐 An OmniAuth strategy to accept JWT-based single sign-on."
   spec.description = "🔐 An OmniAuth strategy to accept JWT-based single sign-on."
