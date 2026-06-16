@@ -28,18 +28,14 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Restored JRuby 9.2 and 9.3 CI by using OpenSSL APIs available on older JRuby
-  releases for EC key setup and only running ECDSA examples when the runtime
-  exposes the primitives required by the `jwt` gem.
-
 ### Security
 
 ## [0.1.1] - 2026-06-16
 
 - TAG: [v0.1.1][0.1.1t]
-- COVERAGE: 97.01% -- 65/67 lines in 5 files
-- BRANCH COVERAGE: 85.71% -- 12/14 branches in 5 files
-- 11.76% documented
+- COVERAGE: 96.47% -- 82/85 lines in 5 files
+- BRANCH COVERAGE: 90.91% -- 20/22 branches in 5 files
+- 10.53% documented
 
 ### Added
 
