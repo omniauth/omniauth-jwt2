@@ -244,7 +244,9 @@ RSpec.describe OmniAuth::Strategies::JWT do
     end
 
     it "reads EC keys with the generic OpenSSL reader when available" do
-      expect(subject.ec_key(ec_private_key.to_pem)).to be_a(OpenSSL::PKey::EC)
+      allow(OpenSSL::PKey).to receive(:read).with("ec-key-pem").and_return(ec_private_key)
+
+      expect(subject.ec_key("ec-key-pem")).to be_a(OpenSSL::PKey::EC)
     end
 
     it "falls back to the EC constructor when the generic OpenSSL reader is unavailable" do
@@ -265,7 +267,7 @@ RSpec.describe OmniAuth::Strategies::JWT do
     end
 
     it "leaves public EC keys unchanged" do
-      key = instance_double(OpenSSL::PKey::EC, private?: false)
+      key = double("public EC key", private?: false)
 
       expect(subject.ec_public_key(key)).to equal(key)
     end

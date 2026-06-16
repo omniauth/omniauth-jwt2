@@ -6,7 +6,7 @@
     [166, 3, 39, "Gemspec/DependencyVersion: Dependency version specification is required.", 190611830],
     [167, 3, 45, "Gemspec/DependencyVersion: Dependency version specification is required.", 1496807756]
   ],
-  "spec/lib/omniauth/strategies/jwt_spec.rb:1243154233": [
+  "spec/lib/omniauth/strategies/jwt_spec.rb:2027581784": [
     [3, 1, 40, "RSpec/SpecFilePathFormat: Spec path should end with `omni_auth/strategies/jwt*_spec.rb`.", 1545891400],
     [20, 13, 25, "RSpec/DescribedClass: Use `described_class` instead of `OmniAuth::Strategies::JWT`.", 2234488924],
     [32, 11, 15, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 391893083],
