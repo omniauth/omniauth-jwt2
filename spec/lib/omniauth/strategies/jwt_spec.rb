@@ -145,21 +145,27 @@ RSpec.describe OmniAuth::Strategies::JWT do
       algorithms.each do |algorithm|
         context "when the #{algorithm} algorithm is used" do
           let(:algorithm) { algorithm }
+          let(:ecdsa_private_key) { generate_ec_private_key(ecdsa_named_curves[algorithm]) }
           let(:secret) do
             # rubocop:disable Style/CaseLikeIf
             if private_key_class == OpenSSL::PKey::RSA
               private_key_class.generate(2048)
                 .to_pem
             elsif private_key_class == OpenSSL::PKey::EC
-              generate_ec_private_key(ecdsa_named_curves[algorithm])
-                .to_pem
+              ecdsa_private_key.to_pem
             else
               private_key_class.new(rand_secret)
             end
             # rubocop:enable Style/CaseLikeIf
           end
 
-          let(:private_key) { private_key_class ? private_key_class.new(secret) : secret }
+          let(:private_key) do
+            if private_key_class == OpenSSL::PKey::EC
+              ecdsa_private_key
+            else
+              private_key_class.new(secret)
+            end
+          end
 
           it "decodes the user information" do
             result = subject.decoded
