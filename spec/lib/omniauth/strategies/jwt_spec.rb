@@ -24,6 +24,12 @@ RSpec.describe OmniAuth::Strategies::JWT do
     end
   }
 
+  describe "omniauth-jwt2 require path" do
+    it "loads through the gem-name require path" do
+      expect(require("omniauth-jwt2")).to be(false).or be(true)
+    end
+  end
+
   it "aliases the historical version namespace to the gem-name namespace" do
     expect(Omniauth::JWT::Version).to equal(Omniauth::JWT2::Version)
     expect(Omniauth::JWT::VERSION).to eq(Omniauth::JWT2::VERSION)

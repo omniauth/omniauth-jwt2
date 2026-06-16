@@ -20,6 +20,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- Added top-level `require "omniauth-jwt2"` support for shim gems and direct
+  gem-name requires.
+
 ### Changed
 
 ### Deprecated
