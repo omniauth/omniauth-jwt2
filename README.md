@@ -2,7 +2,7 @@
 
 # 🔐 Omniauth::JWT
 
-[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
+[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
 
 `if ci_badges.map(&:color).detect { it != "green"}` ☝️ [let me know][✉️discord-invite], as I may have missed the [discord notification][✉️discord-invite].
 
@@ -249,8 +249,6 @@ See [CONTRIBUTING.md][🤝contributing].
 
 [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls]
 
-[![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov]
-
 </details>
 
 ### 🪇 Code of Conduct
@@ -443,10 +441,6 @@ Thanks for RTFM. ☺️
 [👽dl-ranki]: https://img.shields.io/gem/rd/omniauth-jwt2.svg
 [👽version]: https://bestgems.org/gems/omniauth-jwt2
 [👽versioni]: https://img.shields.io/gem/v/omniauth-jwt2.svg
-[🏀qlty-mnt]: https://qlty.sh/gh/omniauth/projects/omniauth-jwt2
-[🏀qlty-mnti]: https://qlty.sh/gh/omniauth/projects/omniauth-jwt2/maintainability.svg
-[🏀qlty-cov]: https://qlty.sh/gh/omniauth/projects/omniauth-jwt2/metrics/code?sort=coverageRating
-[🏀qlty-covi]: https://qlty.sh/gh/omniauth/projects/omniauth-jwt2/coverage.svg
 [🏀codecov]: https://codecov.io/gh/omniauth/omniauth-jwt2
 [🏀codecovi]: https://codecov.io/gh/omniauth/omniauth-jwt2/graph/badge.svg
 [🏀coveralls]: https://coveralls.io/github/omniauth/omniauth-jwt2?branch=main

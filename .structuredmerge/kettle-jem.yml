@@ -170,6 +170,12 @@ workflows:
   #       requirement: ">= 8.0"
   #   gemfile_pattern: "ar-{version}.x"
 
+# Managed service integrations.
+# Set a service to false to remove its README badges, workflow upload/check
+# steps, packaged template files, and inactive generated config.
+integrations:
+  qlty: false
+
 # README top logos.
 # Comma-separated list of optional logo entries for the generated README header.
 # top_logos render above the title; h2_synopsis_logos render inline with the Synopsis H2.

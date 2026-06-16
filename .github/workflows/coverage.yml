@@ -96,16 +96,6 @@ jobs:
           format: lcov
         continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
 
-      - name: Upload coverage to QLTY
-        if: ${{ !env.ACT }}
-        uses: qltysh/qlty-action/coverage@fd52dc852530a708d68c3b7342f8d33d1df4cd55 # v2.2.1
-        with:
-          oidc: true
-          files: coverage/lcov.info
-          format: lcov
-          skip-errors: false
-        continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
-
       - name: Upload coverage to CodeCov
         if: ${{ !env.ACT }}
         uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7
