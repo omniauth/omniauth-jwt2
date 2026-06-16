@@ -33,7 +33,7 @@ module OmniAuth
             when "RS256", "RS384", "RS512"
               OpenSSL::PKey::RSA.new(options.secret).public_key
             when "ES256", "ES384", "ES512"
-              OpenSSL::PKey::EC.new(options.secret)
+              ec_key(options.secret)
             when "HS256", "HS384", "HS512"
               options.secret
             else
@@ -68,6 +68,16 @@ module OmniAuth
         end
 
         @decoded
+      end
+
+      def ec_key(secret)
+        return secret if secret.is_a?(OpenSSL::PKey::EC)
+
+        if OpenSSL::PKey.respond_to?(:read)
+          OpenSSL::PKey.read(secret)
+        else
+          OpenSSL::PKey::EC.new(secret)
+        end
       end
 
       def callback_phase
