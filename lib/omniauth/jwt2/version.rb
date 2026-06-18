@@ -3,7 +3,7 @@
 module Omniauth
   module JWT2
     module Version
-      VERSION = "0.1.1"
+      VERSION = "1.0.0"
     end
     VERSION = Version::VERSION # Traditional Constant Location
   end

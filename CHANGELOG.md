@@ -20,9 +20,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added top-level `require "omniauth-jwt2"` support for shim gems and direct
-  gem-name requires.
-
 ### Changed
 
 ### Deprecated
@@ -32,6 +29,18 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [1.0.0] - 2026-06-18
+
+- TAG: [v1.0.0][1.0.0t]
+- COVERAGE: 98.84% -- 85/86 lines in 6 files
+- BRANCH COVERAGE: 92.31% -- 24/26 branches in 6 files
+- 10.53% documented
+
+### Added
+
+- Added top-level `require "omniauth-jwt2"` support for shim gems and direct
+  gem-name requires.
 
 ## [0.1.1] - 2026-06-16
 
@@ -60,6 +69,8 @@ Please file a bug if you notice a violation of semantic versioning.
 - Removed obsolete pre-template workflow and gemfile setup in favor of the
   generated modular gemfiles and Appraisals.
 
-[Unreleased]: https://github.com/omniauth/omniauth-jwt2/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/omniauth/omniauth-jwt2/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/omniauth/omniauth-jwt2/compare/v0.1.1...v1.0.0
+[1.0.0t]: https://github.com/omniauth/omniauth-jwt2/releases/tag/v1.0.0
 [0.1.1]: https://github.com/omniauth/omniauth-jwt2/compare/2a0397c0592e25b1c518d2c41fcbb8628a255bdf...v0.1.1
 [0.1.1t]: https://github.com/omniauth/omniauth-jwt2/releases/tag/v0.1.1

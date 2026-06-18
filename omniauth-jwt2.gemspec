@@ -162,9 +162,9 @@ Gem::Specification.new do |spec|
   # See: https://github.com/vcr/vcr/issues/1057
   # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
-  spec.add_development_dependency "rack-session", ">= 0"                           # ruby >= 2.4, old Ruby appraisals use a fork
   spec.add_development_dependency "guard"                                   # ruby 1.9.3
   spec.add_development_dependency "guard-rspec"                             # ruby *
+  spec.add_development_dependency "rack-session", ">= 0"                           # ruby >= 2.4, old Ruby appraisals use a fork
   spec.add_development_dependency "rack-test", "~> 2.1"                     # ruby 2.0
   spec.add_development_dependency "rspec", "~> 3.12"                        # ruby *
   spec.add_development_dependency "rspec-pending_for", "~> 0.1"             # ruby *
