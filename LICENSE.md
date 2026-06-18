@@ -12,6 +12,5 @@ Choose the option that best fits your use case:
 - Copyright (c) 2015 Robin Ward
 - Copyright (c) 2015 Zach Schneider
 - Copyright (c) 2020 Marcin Koziej
-- Copyright (c) 2020 Osama Sayegh
 - Copyright (c) 2023 Nicolás Hock Isaza
-- Copyright (c) 2023, 2026 Peter Boling
+- Copyright (c) 2023, 2026 Peter H. Boling

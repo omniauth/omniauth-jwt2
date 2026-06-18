@@ -1,6 +1,6 @@
 <a href="https://github.com/omniauth"><img alt="omniauth Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/omniauth/avatar-128px.svg" width="14%" align="right"/></a>
 
-# 🔐 Omniauth::JWT
+# 🔐 Omniauth::JWT2
 
 [![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
 
@@ -320,9 +320,8 @@ See [LICENSE.md][📄license] for the official copyright notice.
 - Copyright (c) 2015 Robin Ward
 - Copyright (c) 2015 Zach Schneider
 - Copyright (c) 2020 Marcin Koziej
-- Copyright (c) 2020 Osama Sayegh
 - Copyright (c) 2023 Nicolás Hock Isaza
-- Copyright (c) 2023, 2026 Peter Boling
+- Copyright (c) 2023, 2026 Peter H. Boling
 
 </details>
 
@@ -387,7 +386,7 @@ Thanks for RTFM. ☺️
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [⛳️gem-namespace]: https://github.com/omniauth/omniauth-jwt2
-[⛳️namespace-img]: https://img.shields.io/badge/namespace-Omniauth::JWT-3C2D2D.svg?style=square&logo=ruby&logoColor=white
+[⛳️namespace-img]: https://img.shields.io/badge/namespace-Omniauth::JWT2-3C2D2D.svg?style=square&logo=ruby&logoColor=white
 [⛳️gem-name]: https://bestgems.org/gems/omniauth-jwt2
 [⛳️name-img]: https://img.shields.io/badge/name-omniauth--jwt2-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
 [⛳️tag-img]: https://img.shields.io/github/tag/omniauth/omniauth-jwt2.svg
@@ -533,7 +532,7 @@ Thanks for RTFM. ☺️
 [📌gitmoji]: https://gitmoji.dev
 [📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.067-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.085-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: https://github.com/omniauth/omniauth-jwt2/blob/main/SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
@@ -561,7 +560,7 @@ Thanks for RTFM. ☺️
 | Package | omniauth-jwt2 |
 | Description | 🔐 An OmniAuth strategy to accept JWT-based single sign-on. |
 | Homepage | https://github.com/omniauth/omniauth-jwt2 |
-| Source | https://github.com/omniauth/omniauth-jwt2/tree/v0.1.0 |
+| Source | https://github.com/omniauth/omniauth-jwt2 |
 | License | `MIT` |
 | Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/omniauth, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/omniauth-jwt2, https://www.buymeacoffee.com/pboling |
 <!-- kettle-jem:metadata:end -->

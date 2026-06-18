@@ -20,8 +20,8 @@ gem_version =
 Gem::Specification.new do |spec|
   spec.name = "omniauth-jwt2"
   spec.version = gem_version
-  spec.authors = ["Michael Bleigh", "Robin Ward", "Peter Boling"]
-  spec.email = ["mbleigh@mbleigh.com", "robin.ward@gmail.com", "floss@galtzo.com"]
+  spec.authors = ["Michael Bleigh", "Chris Waters", "Robin Ward", "Zach Schneider", "Marcin Koziej", "Nicolás Hock Isaza", "Peter H. Boling"]
+  spec.email = ["floss@galtzo.com"]
 
   spec.summary = "🔐 An OmniAuth strategy to accept JWT-based single sign-on."
   spec.description = "🔐 An OmniAuth strategy to accept JWT-based single sign-on."
@@ -124,7 +124,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.9")      # ruby >= 2.4
+  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.11")     # ruby >= 2.4
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -138,8 +138,7 @@ Gem::Specification.new do |spec|
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.2")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
   spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.5")             # ruby >= 2.4
-  spec.add_development_dependency "rack-session", ">= 0"                           # ruby >= 2.4, old Ruby appraisals use a fork
-  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.3")            # ruby >= 2.4.0, default kettle-test runner
+  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.4")            # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
@@ -163,6 +162,7 @@ Gem::Specification.new do |spec|
   # See: https://github.com/vcr/vcr/issues/1057
   # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
+  spec.add_development_dependency "rack-session", ">= 0"                           # ruby >= 2.4, old Ruby appraisals use a fork
   spec.add_development_dependency "guard"                                   # ruby 1.9.3
   spec.add_development_dependency "guard-rspec"                             # ruby *
   spec.add_development_dependency "rack-test", "~> 2.1"                     # ruby 2.0
