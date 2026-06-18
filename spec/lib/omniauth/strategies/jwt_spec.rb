@@ -124,6 +124,7 @@ RSpec.describe OmniAuth::Strategies::JWT do
     let(:secret) { rand_secret }
     let(:private_key) { secret }
     let(:payload) { JWT.encode(claims, private_key, algorithm) }
+    let(:expect_request_params) { true }
 
     before do
       subject.options[:secret] = secret
@@ -131,8 +132,10 @@ RSpec.describe OmniAuth::Strategies::JWT do
 
       # We use Rack::Request instead of ActionDispatch::Request because
       # Rack::Test::Methods enables testing of this module.
-      expect_next_instance_of(Rack::Request) do |rack_request|
-        expect(rack_request).to receive(:params).and_return("jwt" => payload)
+      if expect_request_params
+        expect_next_instance_of(Rack::Request) do |rack_request|
+          expect(rack_request).to receive(:params).and_return("jwt" => payload)
+        end
       end
     end
 
@@ -183,6 +186,26 @@ RSpec.describe OmniAuth::Strategies::JWT do
             expect(result).to eq(claims.stringify_keys)
           end
         end
+      end
+    end
+
+    context "when OpenSSL is unavailable" do
+      before do
+        hide_const("OpenSSL")
+      end
+
+      it "uses the configured secret before JWT decoding fails without OpenSSL" do
+        expect { subject.decoded }.to raise_error(OmniAuth::Strategies::Jwt::BadJwt, /uninitialized constant JWT::JWA::Hmac::OpenSSL/)
+      end
+    end
+
+    context "when the configured algorithm is unsupported" do
+      let(:algorithm) { "NOPE" }
+      let(:payload) { JWT.encode(claims, private_key, "HS256") }
+      let(:expect_request_params) { false }
+
+      it "raises a bad JWT error" do
+        expect { subject.decoded }.to raise_error(OmniAuth::Strategies::Jwt::BadJwt, /Unsupported algorithm: NOPE/)
       end
     end
 
