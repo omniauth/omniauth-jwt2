@@ -195,7 +195,10 @@ RSpec.describe OmniAuth::Strategies::JWT do
       end
 
       it "uses the configured secret before JWT decoding fails without OpenSSL" do
-        expect { subject.decoded }.to raise_error(OmniAuth::Strategies::Jwt::BadJwt, /uninitialized constant JWT::JWA::Hmac::OpenSSL/)
+        expect { subject.decoded }.to raise_error(
+          OmniAuth::Strategies::Jwt::BadJwt,
+          /uninitialized constant JWT::(?:JWA|Algos)::Hmac::OpenSSL/
+        )
       end
     end
 

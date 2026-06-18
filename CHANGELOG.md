@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Relaxed the OpenSSL-unavailable spec to support both JWT internal HMAC
+  namespaces used across supported Ruby and `jwt` dependency combinations.
+
 ### Security
 
 ## [1.0.0] - 2026-06-18
