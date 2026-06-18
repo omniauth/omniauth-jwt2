@@ -28,9 +28,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Relaxed the OpenSSL-unavailable spec to support both JWT internal HMAC
-  namespaces used across supported Ruby and `jwt` dependency combinations.
-
 ### Security
 
 ## [1.0.0] - 2026-06-18
@@ -44,6 +41,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Added top-level `require "omniauth-jwt2"` support for shim gems and direct
   gem-name requires.
+
+### Fixed
+
+- Relaxed the OpenSSL-unavailable spec to support both JWT internal HMAC
+  namespaces used across supported Ruby and `jwt` dependency combinations.
 
 ## [0.1.1] - 2026-06-16
 
