@@ -39,7 +39,6 @@ GEM
     delegate (0.6.1)
     diff-lcs (1.6.2)
     diffy (3.4.4)
-    docile (1.4.1)
     dry-configurable (1.4.0)
       dry-core (~> 1.0)
       zeitwerk (~> 2.6)
@@ -117,18 +116,17 @@ GEM
     json (2.19.9)
     jwt (2.10.3)
       base64
-    kettle-dev (2.2.11)
+    kettle-dev (2.2.13)
       kettle-test (~> 2.0, >= 2.0.4)
       version_gem (~> 1.1, >= 1.1.11)
-    kettle-soup-cover (2.0.2)
-      simplecov (~> 0.22, >= 0.22.0)
-      simplecov-cobertura (~> 3.1, >= 3.1.0)
+    kettle-soup-cover (3.0.0.rc1)
+      simplecov (>= 1.0.pre)
+      simplecov-cobertura (>= 4.0.pre)
       simplecov-console (~> 0.9, >= 0.9.5)
-      simplecov-html (~> 0.13, >= 0.13.2)
-      simplecov-lcov (~> 0.9, >= 0.9.0)
       simplecov-rcov (~> 0.3, >= 0.3.7)
       simplecov_json_formatter (~> 0.1, >= 0.1.4)
-      version_gem (~> 1.1, >= 1.1.11)
+      simplecov_lcov_formatter (~> 0.9, >= 0.9.0)
+      version_gem (~> 1.1, >= 1.1.12)
     kettle-test (2.0.5)
       appraisal2 (~> 3.0, >= 3.0.6)
       backports (~> 3.0)
@@ -156,21 +154,21 @@ GEM
     method_source (1.1.0)
     mutex_m (0.3.0)
     nenv (0.3.0)
-    nokogiri (1.19.3-aarch64-linux-gnu)
+    nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.3-aarch64-linux-musl)
+    nokogiri (1.19.4-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.19.3-arm-linux-gnu)
+    nokogiri (1.19.4-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.3-arm-linux-musl)
+    nokogiri (1.19.4-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.19.3-arm64-darwin)
+    nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.19.3-x86_64-darwin)
+    nokogiri (1.19.4-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.19.3-x86_64-linux-gnu)
+    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.3-x86_64-linux-musl)
+    nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
     nomono (1.0.4)
       version_gem (~> 1.1, >= 1.1.11)
@@ -353,22 +351,19 @@ GEM
     silent_stream (1.0.12)
       logger (~> 1.2)
       version_gem (>= 1.1.8, < 3)
-    simplecov (0.22.0)
-      docile (~> 1.1)
-      simplecov-html (~> 0.11)
-      simplecov_json_formatter (~> 0.1)
-    simplecov-cobertura (3.2.0)
+    simplecov (1.0.0.rc3)
+    simplecov-cobertura (4.0.0.rc1)
       rexml
-      simplecov (~> 0.19)
+      simplecov (>= 1.0.0.rc2, < 2.0)
     simplecov-console (0.9.5)
       ansi
       simplecov
       terminal-table
-    simplecov-html (0.13.2)
-    simplecov-lcov (0.9.0)
     simplecov-rcov (0.3.7)
       simplecov (>= 0.4.1)
     simplecov_json_formatter (0.1.4)
+    simplecov_lcov_formatter (0.9.0)
+      simplecov (>= 0.18)
     standard (1.55.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -465,8 +460,8 @@ DEPENDENCIES
   guard
   guard-rspec
   irb (~> 1.17)
-  kettle-dev (~> 2.2, >= 2.2.11)
-  kettle-soup-cover (~> 2.0, >= 2.0.2)
+  kettle-dev (~> 2.2, >= 2.2.13)
+  kettle-soup-cover (~> 3.0.a, >= 3.0.0.rc1)
   kettle-test (~> 2.0, >= 2.0.5)
   kramdown (~> 2.5, >= 2.5.1)
   kramdown-parser-gfm (~> 1.1)
@@ -524,7 +519,6 @@ CHECKSUMS
   delegate (0.6.1) sha256=54cf946cacfe05b1c23114edd8fbd8d54e9cea7abf36b95130ab53cc88b8f7e4
   diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
   diffy (3.4.4) sha256=79384ab5ca82d0e115b2771f0961e27c164c456074bd2ec46b637ebf7b6e47e3
-  docile (1.4.1) sha256=96159be799bfa73cdb721b840e9802126e4e03dfc26863db73647204c727f21e
   dry-configurable (1.4.0) sha256=e35d1b5f3c081753ef361f564919db79000f32cfa6f20ee3a3ba5921b41b73ce
   dry-core (1.2.0) sha256=0cc5a7da88df397f153947eeeae42e876e999c1e30900f3c536fb173854e96a1
   dry-inflector (1.3.1) sha256=7fb0c2bb04f67638f25c52e7ba39ab435d922a3a5c3cd196120f63accb682dcc
@@ -554,8 +548,8 @@ CHECKSUMS
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
   json (2.19.9) sha256=9b9025b7cdddafa38d316eca0b2358488e42d417045c1b90d216a9fefe46b79a
   jwt (2.10.3) sha256=e4d9352fbc7309b1a7448c7dd713dfe4d8c47077af80759cdbed8f878ea0b484
-  kettle-dev (2.2.11) sha256=0d87e9beb5393bc37808ae24353ce42fcae3bb29d817939a1ec360fe42ee81bf
-  kettle-soup-cover (2.0.2) sha256=e400380e165cc880fb0c83f05b2836d815c414b4c707e9c93d5b91979ab12ab4
+  kettle-dev (2.2.13) sha256=f396b331c7b15ede36aecc1d52f33ce5ad048f713d1051d4bfe96a43538a3e36
+  kettle-soup-cover (3.0.0.rc1) sha256=ec678a573c9c3e75cb091da3251079834db715aaba31785d84c0a2c8d8c5f72d
   kettle-test (2.0.5) sha256=98fd96f03c4470cd2cb0b1cef339455064d8a68bc180f70864d85fd74f41d978
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
@@ -567,14 +561,14 @@ CHECKSUMS
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mutex_m (0.3.0) sha256=cfcb04ac16b69c4813777022fdceda24e9f798e48092a2b817eb4c0a782b0751
   nenv (0.3.0) sha256=d9de6d8fb7072228463bf61843159419c969edb34b3cef51832b516ae7972765
-  nokogiri (1.19.3-aarch64-linux-gnu) sha256=46b89e5d7b9e844c2ee360794240c6ea2a4e6fa0c5892a4ed487db621224b639
-  nokogiri (1.19.3-aarch64-linux-musl) sha256=8392dfdcd21be7a94dbbe9ccc138dea01b97b24cb2dc02a114ca98bfb1d9a0b7
-  nokogiri (1.19.3-arm-linux-gnu) sha256=3919d5ffc334ad778a4a9eb88fda7dcb8b1fb58c8a52ac640c6dcd2f038e774f
-  nokogiri (1.19.3-arm-linux-musl) sha256=9ce1cb6346bb9c67b1550eb537aa183ead91e4b6eadb2f36ade02d8dd2a79fb6
-  nokogiri (1.19.3-arm64-darwin) sha256=71b9bd424b1b7abc18b05052a1a3cfd3627abdca62be280854cc411791357e42
-  nokogiri (1.19.3-x86_64-darwin) sha256=77f3fba57d46c53ab31e62fc6c28f705109d1bf6264356c76f132b2be5728d4d
-  nokogiri (1.19.3-x86_64-linux-gnu) sha256=2f5078620fe12e83669b5b17311b32532a8153d02eee7ad06948b926d6080976
-  nokogiri (1.19.3-x86_64-linux-musl) sha256=248c906d2166eca5efb56d52fdee5f9a1f51d69a72e2b64fdac647b4ce39ea3f
+  nokogiri (1.19.4-aarch64-linux-gnu) sha256=1269fb644a6de405057a53dd5c762b1209b43ca7424f839454d3dbc677c31a8f
+  nokogiri (1.19.4-aarch64-linux-musl) sha256=35c65b9ce72b3bb03207bdbe7067915019dc18c1b9b59139684bd6690fdd01af
+  nokogiri (1.19.4-arm-linux-gnu) sha256=a301313e38bb065d68239e79734bcd6f56fb6efaacebde29e9abf2a4735340ca
+  nokogiri (1.19.4-arm-linux-musl) sha256=588923c101bcfa78869734d247d25b598674323e7f22474fc468f6e5647311eb
+  nokogiri (1.19.4-arm64-darwin) sha256=a46db9853286e6597b36ebc6953817d15acf3a299583eb3f89fdc6f91dd63527
+  nokogiri (1.19.4-x86_64-darwin) sha256=7fd17057d3e1f00e9954a74b3cd76595d3d4a5ef233b7ed9599047c204f70551
+  nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
+  nokogiri (1.19.4-x86_64-linux-musl) sha256=17dfb7c1fa194ae02fbf7c51a7afc8d278045ab3fdacfd86f91d02d7b274470b
   nomono (1.0.4) sha256=1ad249afd491e46f0f32264f824d45c26d9030f8977ca13f258651c7e015bcc9
   notiffany (0.1.3) sha256=d37669605b7f8dcb04e004e6373e2a780b98c776f8eb503ac9578557d7808738
   omniauth (2.1.4) sha256=42a05b0496f0d22e1dd85d42aaf602f064e36bb47a6826a27ab55e5ba608763c
@@ -639,13 +633,12 @@ CHECKSUMS
   ruby_version (1.0.3) sha256=5930f9950746b7e6c973184398ee364ee7440b170fef7922b9f5cdf317f1ccb5
   shellany (0.0.1) sha256=0e127a9132698766d7e752e82cdac8250b6adbd09e6c0a7fbbb6f61964fedee7
   silent_stream (1.0.12) sha256=377c43aa10033fe90c33b39ea8cd97d79f2d1c4856df598efc56f3091f3ae782
-  simplecov (0.22.0) sha256=fe2622c7834ff23b98066bb0a854284b2729a569ac659f82621fc22ef36213a5
-  simplecov-cobertura (3.2.0) sha256=70d702658677fcb20e5aceb6915ccf8bc62ff2ccd38b62b3ad5c9db5c0888740
+  simplecov (1.0.0.rc3) sha256=932addedd729aa355ca2087d99f088d32660b3203e471f64e11caba418b229ab
+  simplecov-cobertura (4.0.0.rc1) sha256=1de000b112889f5c2d4d4627d00fb27fa0c77de5b2a7a46d9c230c2408de2c11
   simplecov-console (0.9.5) sha256=b1108bcfff5f210143e2b8301698c367b01586f20d25a73e95475a5df6fc6ff6
-  simplecov-html (0.13.2) sha256=bd0b8e54e7c2d7685927e8d6286466359b6f16b18cb0df47b508e8d73c777246
-  simplecov-lcov (0.9.0) sha256=7a77a31e200a595ed4b0249493056efd0c920601f53d2ef135ca34ee796346cd
   simplecov-rcov (0.3.7) sha256=372f50bf6df6b6350b7d0c840f2f8bdabe021861a43c26877b747c9ac96139fc
   simplecov_json_formatter (0.1.4) sha256=529418fbe8de1713ac2b2d612aa3daa56d316975d307244399fa4838c601b428
+  simplecov_lcov_formatter (0.9.0) sha256=4c1839bb31dcf7a8f7a6474c94ed228aa03b994e9dd5e1965e58b4121b049bed
   standard (1.55.0) sha256=8a8f2c3e681a4db3aafde1b301561b0f3d7c5f06c160167cb744a4d7baf0426e
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
   standard-performance (1.9.0) sha256=49483d31be448292951d80e5e67cdcb576c2502103c7b40aec6f1b6e9c88e3f2
