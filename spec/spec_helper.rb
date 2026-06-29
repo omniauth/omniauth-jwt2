@@ -10,9 +10,9 @@ begin
   require "kettle-soup-cover"
   if Kettle::Soup::Cover::DO_COV
     require "simplecov"
+    require "kettle/soup/cover/config"
     SimpleCov.start
   end
-  require "simplecov" if Kettle::Soup::Cover::DO_COV # `.simplecov` is run here!
 rescue LoadError => error
   # check the error message and re-raise when unexpected
   raise error unless error.message.include?("kettle")
@@ -94,6 +94,4 @@ RSpec.configure do |config|
 end
 
 # Last thing before loading this library, load simplecov:
-require "simplecov" if defined?(Kettle::Soup::Cover) && Kettle::Soup::Cover::DO_COV
-
 require "omniauth/jwt"
