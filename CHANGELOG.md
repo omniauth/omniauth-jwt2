@@ -20,12 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added support for JRuby 10.1 and TruffleRuby 34.0.
-
 ### Changed
-
-- Retemplated generated project metadata, support documentation, CI workflows,
-  binstubs, and development dependency floors with `kettle-jem` v7.0.0.
 
 ### Deprecated
 
@@ -33,9 +28,27 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Package configured license files in gem release file lists.
-
 ### Security
+
+## [1.0.1] - 2026-07-14
+
+- TAG: [v1.0.1][1.0.1t]
+- COVERAGE: 98.84% -- 85/86 lines in 6 files
+- BRANCH COVERAGE: 92.31% -- 24/26 branches in 6 files
+- 10.53% documented
+
+### Added
+
+- Added support for JRuby 10.1 and TruffleRuby 34.0.
+
+### Changed
+
+- Retemplated generated project metadata, support documentation, CI workflows,
+  binstubs, and development dependency floors with `kettle-jem` v7.0.0.
+
+### Fixed
+
+- Package configured license files in gem release file lists.
 
 ## [1.0.0] - 2026-06-18
 
@@ -81,7 +94,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Removed obsolete pre-template workflow and gemfile setup in favor of the
   generated modular gemfiles and Appraisals.
 
-[Unreleased]: https://github.com/omniauth/omniauth-jwt2/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/omniauth/omniauth-jwt2/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/omniauth/omniauth-jwt2/compare/v1.0.0...v1.0.1
+[1.0.1t]: https://github.com/omniauth/omniauth-jwt2/releases/tag/v1.0.1
 [1.0.0]: https://github.com/omniauth/omniauth-jwt2/compare/v0.1.1...v1.0.0
 [1.0.0t]: https://github.com/omniauth/omniauth-jwt2/releases/tag/v1.0.0
 [0.1.1]: https://github.com/omniauth/omniauth-jwt2/compare/2a0397c0592e25b1c518d2c41fcbb8628a255bdf...v0.1.1
