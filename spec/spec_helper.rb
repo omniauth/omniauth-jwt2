@@ -46,7 +46,7 @@ rescue LoadError
   nil # Gem doesn't exist for ancient Rubies 2.2 & 2.3
 end
 
-require "byebug" if ENV["DEBUG"] == "true"
+require "debug"
 # This does not require "simplecov",
 #   because that has a side-effect of running `.simplecov`
 begin
