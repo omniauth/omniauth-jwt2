@@ -16,7 +16,7 @@
     [155, 7, 56, "Performance/RedundantMerge: Use `algos[OpenSSL::PKey::EC] = %w[ES256 ES384 ES512]` instead of `algos.merge!(OpenSSL::PKey::EC => %w[ES256 ES384 ES512])`.", 2983772293],
     [215, 13, 28, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 1877551307]
   ],
-  "spec/spec_helper.rb:3756095424": [
+  "spec/spec_helper.rb:4081004190": [
     [55, 3, 34, "RSpec/Output: Do not write to stdout in specs.", 1097326571],
     [61, 37, 11, "Style/FileNull: Use `File::NULL` instead of `/dev/null`.", 597636425],
     [63, 1, 45, "RSpec/Output: Do not write to stdout in specs.", 127557464]
