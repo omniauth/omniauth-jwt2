@@ -2,7 +2,7 @@
   "lib/omniauth/strategies/jwt.rb:3798539357": [
     [59, 9, 76, "Lint/RescueException: Avoid rescuing the `Exception` class. Perhaps you meant to rescue `StandardError`?", 967033479]
   ],
-  "omniauth-jwt2.gemspec:741130521": [
+  "omniauth-jwt2.gemspec:3055152505": [
     [165, 3, 39, "Gemspec/DependencyVersion: Dependency version specification is required.", 190611830],
     [166, 3, 45, "Gemspec/DependencyVersion: Dependency version specification is required.", 1496807756]
   ],
