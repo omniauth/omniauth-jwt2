@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "anonymous_loader"
-require "omniauth/jwt2"
+require "omniauth-jwt2"
 RSpec.describe Omniauth::JWT2::Version do
   it_behaves_like "a Version module", described_class
 
