@@ -46,7 +46,7 @@ rescue LoadError
   nil # Gem doesn't exist for ancient Rubies 2.2 & 2.3
 end
 
-require "debug" if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.7")
+require "debug" if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.7") && ENV["CI"].nil? && ENV.fetch("DEBUG", "false").casecmp("true").zero?
 # This does not require "simplecov",
 #   because that has a side-effect of running `.simplecov`
 begin
