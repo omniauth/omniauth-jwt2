@@ -128,6 +128,11 @@ gem install omniauth-jwt2
 
 ## ⚙️ Configuration
 
+Configure the strategy with the shared secret and required `auth_url`. The
+optional `algorithm`, `uid_claim`, `required_claims`, `info_map`, and
+`valid_within` options control JWT verification and the fields exposed in the
+OmniAuth auth hash. Keep the secret outside source control.
+
 ## 🔧 Basic Usage
 
 You use OmniAuth::JWT just like you do any other OmniAuth strategy:
